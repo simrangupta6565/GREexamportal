@@ -131,10 +131,10 @@
                                     </div>
                                     <div class="form-group p-2">
                                         <input type="submit" class="btn btn-primary" name="submit" value="Add User">
-                                        <a  th:href="@{/organiser/exam/mail(id=${exam.getId()})}" class="btn btn-danger ml-2" >Mail Users</a>
+                                      <!--  <a  th:href="@{/organiser/exam/mail(id=${exam.getId()})}" class="btn btn-danger ml-2" >Mail Users</a>-->
                                     </div>
                                 </form>
-                                <form method="POST" th:action="@{/user/csv/upload}" enctype="multipart/form-data" class="form-inline">
+                              <!--  <form method="POST" th:action="@{/user/csv/upload}" enctype="multipart/form-data" class="form-inline">
                                     <input type="hidden" name="exam_id" th:value="${exam.getId()}">
                                     <div class="form-group p-2">
                                         <label for="file" class="pr-2">Select a CSV file</label>
@@ -143,7 +143,7 @@
                                     <div class="form-group p-2">
                                         <button type="submit" class="btn btn-primary">Import Users</button>
                                     </div>
-                                </form>
+                                </form> -->
                                 <div class="alert alert-success" role="alert"  th:inline="text" th:if="${success_message}">
                                     <button type="button" class="close" data-dismiss="alert">x</button>
                                     [[${success_message}]]

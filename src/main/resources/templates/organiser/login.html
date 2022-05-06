@@ -81,11 +81,11 @@
                 </form>
 
 
-                <!--       <p class="mb-1"> -->
-                <!--         <a href="forgot-password.html">I forgot my password</a> -->
-                <!--       </p> -->
+                      <p class="mb-1"> 
+                        <a href= "" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Reset my password</a>
+                      </p>
                 <p class="mb-0">
-                  <a th:href="@{/organiser/register}" class="text-center">Register a new membership</a>
+                  <a th:href="@{/organiser/register}" class="text-center"></a>
                 </p>
               </div>
               <!-- /.login-card-body -->
@@ -100,6 +100,53 @@
   <div th:replace="fragments/footer :: footer"></div>
 </div>
 <!-- ./wrapper -->
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Change Password</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+         <div class="input-group mb-3">
+                    <input type="email" class="form-control" placeholder="Email"  required>
+                    <div class="input-group-append">
+                      <div class="input-group-text">
+                        <span class="fas fa-envelope"></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="input-group mb-3">
+                    <input type="password" class="form-control" placeholder="Old Password" required>
+                    <div class="input-group-append">
+                      <div class="input-group-text">
+                        <span class="fas fa-lock"></span>
+                      </div>
+                    </div>
+                  </div>
+                   <div class="input-group mb-3">
+                    <input type="password" class="form-control" placeholder="New Password" required>
+                    <div class="input-group-append">
+                      <div class="input-group-text">
+                        <span class="fas fa-lock"></span>
+                      </div>
+                    </div>
+                  </div>
+                  
+        </form>
+      </div>
+      <div class="modal-footer">
+        <div class="col-4">
+                      <button type="submit" class="btn btn-primary btn-block">Change Password</button>
+                    </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- REQUIRED SCRIPTS -->
 
